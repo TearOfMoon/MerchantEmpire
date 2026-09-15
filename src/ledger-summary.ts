@@ -18,8 +18,8 @@ function addLedgerSummary() {
   const summary = document.createElement('div');
   summary.className = 'kpis ledgerSummary';
   summary.innerHTML = `
-    <div class="kpi ledgerIncome"><small>Entrate Totali</small><strong>${silver(income)}</strong></div>
-    <div class="kpi ledgerExpense"><small>Uscite Totali</small><strong>${silver(expenses)}</strong></div>
+    <div class="kpi ledgerIncome"><small>Entrate Totali</small><strong class="in">${silver(income)}</strong></div>
+    <div class="kpi ledgerExpense"><small>Uscite Totali</small><strong class="out">− ${silver(expenses)}</strong></div>
     <div class="kpi ledgerBalance"><small>Saldo Attuale</small><strong>${silver(balance)}</strong></div>
     <div class="kpi ledgerResult"><small>Bilancio</small><strong class="${result >= 0 ? 'in' : 'out'}">${result >= 0 ? 'PROFITTO +' : 'PERDITA −'} ${silver(result)}</strong></div>`;
   header.insertAdjacentElement('afterend', summary);

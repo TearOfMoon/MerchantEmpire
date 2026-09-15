@@ -4,8 +4,6 @@ on:
   push:
     branches: ['main']
   workflow_dispatch:
-  schedule:
-    - cron: '*/5 * * * *'
 
 permissions:
   contents: read
@@ -31,11 +29,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Sync warehouse from Airtable
+      - name: Sync Airtable data
         env:
           AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
           AIRTABLE_BASE_ID: apphq31BIymobdedD
-          AIRTABLE_TABLE_ID: tblnCpscQ0bX1bceO
+          AIRTABLE_WAREHOUSE_TABLE_ID: tblnCpscQ0bX1bceO
+          AIRTABLE_LEDGER_TABLE_ID: tblVnIvSbmb9aLHa7
+          AIRTABLE_ORDERS_TABLE_ID: tbl5mzgHeJGbsDxdZ
         run: node scripts/sync-airtable.mjs
 
       - name: Build

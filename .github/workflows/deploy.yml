@@ -4,6 +4,8 @@ on:
   push:
     branches: ['main']
   workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'
 
 permissions:
   contents: read
@@ -20,16 +22,28 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
           node-version: 22
+
       - name: Install dependencies
         run: npm install
+
+      - name: Sync warehouse from Airtable
+        env:
+          AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
+          AIRTABLE_BASE_ID: apphq31BIymobdedD
+          AIRTABLE_TABLE_ID: tblnCpscQ0bX1bceO
+        run: node scripts/sync-airtable.mjs
+
       - name: Build
         run: npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:

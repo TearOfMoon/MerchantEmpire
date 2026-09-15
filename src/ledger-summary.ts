@@ -39,9 +39,14 @@ function renderValues(summary: HTMLElement) {
 
 function addLedgerSummary() {
   const title = [...document.querySelectorAll('.title h1')].find(el => el.textContent?.trim() === 'Libro Mastro');
-  if (!title) return;
+  const existing = document.querySelector('.ledgerAnalysis');
+  if (!title) { existing?.remove(); return; }
   const header = title.closest('.title');
-  if (!header || header.nextElementSibling?.classList.contains('ledgerAnalysis')) return;
+  if (!header) return;
+  if (existing) {
+    if (existing.previousElementSibling !== header) header.insertAdjacentElement('afterend', existing);
+    return;
+  }
   const wrap=document.createElement('section'); wrap.className='ledgerAnalysis';
   wrap.innerHTML=`<div class="ledgerPeriod" aria-label="Periodo analizzato"><span>Periodo analizzato</span><button data-period="all">Tutto</button><button data-period="today">Oggi</button><button data-period="7d">7 giorni</button><button data-period="30d">30 giorni</button></div><div class="kpis ledgerSummary"><div class="kpi ledgerIncome"><small>Entrate Totali</small><strong class="in" data-value="income"></strong></div><div class="kpi ledgerExpense"><small>Uscite Totali</small><strong class="out" data-value="expense"></strong></div><div class="kpi ledgerBalance"><small>Saldo Attuale</small><strong data-value="balance"></strong><em>Liquidità disponibile</em></div><div class="kpi ledgerResult"><small>Bilancio</small><strong data-value="result"></strong></div></div>`;
   header.insertAdjacentElement('afterend',wrap);
@@ -49,5 +54,10 @@ function addLedgerSummary() {
   renderValues(wrap);
 }
 
-new MutationObserver(addLedgerSummary).observe(document.getElementById('root')!, { childList: true, subtree: true });
+let scheduled = false;
+new MutationObserver(() => {
+  if (scheduled) return;
+  scheduled = true;
+  requestAnimationFrame(() => { scheduled = false; addLedgerSummary(); });
+}).observe(document.getElementById('root')!, { childList: true, subtree: true });
 addLedgerSummary();

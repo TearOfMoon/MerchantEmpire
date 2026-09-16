@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "purpose": "Reference registry for Albion Online screenshot item identification. Separate from TearOfMoon economic data.",
+  "updatedAt": "2026-09-16",
+  "metadata": {
+    "provider": "Albion Online Data Project / ao-data ao-bin-dumps",
+    "itemsJson": "https://raw.githubusercontent.com/ao-data/ao-bin-dumps/master/formatted/items.json",
+    "itemsTxt": "https://raw.githubusercontent.com/ao-data/ao-bin-dumps/master/formatted/items.txt",
+    "preferredLocales": ["IT-IT", "EN-US"],
+    "fields": ["Index", "UniqueName", "LocalizedNames", "LocalizedDescriptions"]
+  },
+  "icons": {
+    "provider": "Sandbox Interactive Albion Render Service",
+    "template": "https://render.albiononline.com/v1/item/{identifier}.png?quality={quality}&size={size}",
+    "defaultQuality": 1,
+    "defaultSize": 217,
+    "qualityRange": [1, 5],
+    "enchantmentSyntax": "Append @1, @2 or @3 to the item identifier when applicable"
+  },
+  "recognitionPolicy": {
+    "workflow": [
+      "detect inventory or warehouse slots",
+      "crop each visible item icon",
+      "use tier, enchantment, quality and slot context to narrow candidates",
+      "resolve candidates against UniqueName and localized names",
+      "compare the screenshot icon with the corresponding Albion Render Service icon",
+      "read visible stack quantity separately",
+      "report ambiguous matches instead of guessing"
+    ],
+    "confidence": {
+      "high": "icon and metadata agree; return exact item",
+      "medium": "small set of plausible matches; report candidates",
+      "low": "do not assign an item ID without user confirmation"
+    },
+    "neverMutateWarehouseFromScreenshotWithoutExplicitAuthorization": true
+  },
+  "economicDatabase": "public/data/merchant-empire.json",
+  "notes": [
+    "Do not duplicate the full Albion icon library in Merchant Empire; resolve icons from item IDs on demand.",
+    "The visual registry is reference data and must not change Silver, ledger, orders or warehouse quantities.",
+    "Prefer the current ao-data fork rather than the archived upstream broderickhyman repository."
+  ]
+}

@@ -8,9 +8,9 @@ async function loadAll(){
     const response=await fetch(`${import.meta.env.BASE_URL}data/merchant-empire.json`,{cache:'no-store'});
     if(!response.ok)throw new Error(`merchant-empire.json: ${response.status}`);
     const data=await response.json();
-    if(!Array.isArray(data?.warehouse?.inventory)||!Array.isArray(data?.ledger?.records)||!Array.isArray(data?.orders?.records))throw new Error('Payload Airtable incompleto');
+    if(!Array.isArray(data?.warehouse?.inventory)||!Array.isArray(data?.ledger?.records)||!Array.isArray(data?.orders?.records))throw new Error('Database interno Merchant Empire incompleto');
     return data;
-  }catch(error){console.warn('Airtable live data non disponibile: uso snapshot locale.',error);return null}
+  }catch(error){console.warn('Database interno Merchant Empire non disponibile: uso snapshot locale.',error);return null}
 }
 const live=await loadAll();
 export const inventory:InventoryItem[]=live?live.warehouse.inventory.map((x:any)=>({item:x.item,tier:x.tier,category:x.category,quantity:Number(x.qty||0),source:x.source,price:Number(x.unitPrice||0),position:x.location})):fallbackInventory.map(x=>({...x}));

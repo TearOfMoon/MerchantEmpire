@@ -1,0 +1,19 @@
+{
+  "name": "TearOfMoon — Merchant Empire",
+  "short_name": "Merchant Empire",
+  "description": "Dashboard economica di TearOfMoon per Albion Online",
+  "start_url": "/MerchantEmpire/",
+  "scope": "/MerchantEmpire/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0d0806",
+  "theme_color": "#32100e",
+  "icons": [
+    {
+      "src": "/MerchantEmpire/art/cartography.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

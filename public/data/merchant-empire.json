@@ -51,7 +51,11 @@
       {"id":"legacy-1","item":"Scarpe da mercenario del principiante T1","quality":"Buona","enchant":".0","quantity":16,"date":"","price":200,"status":"In attesa","total":3200},
       {"id":"legacy-2","item":"Scarpe da mercenario del principiante T1","quality":"Sublime","enchant":".0","quantity":3,"date":"","price":350,"status":"In attesa","total":1050},
       {"id":"new-1","item":"Giacca da mercenario dell'apprendista","quality":"Eccellente","enchant":".0","quantity":1,"date":"","price":4700,"status":"In attesa","total":4700},
-      {"id":"new-2","item":"Scarpe da mercenario dell'apprendista","quality":"Sublime","enchant":".0","quantity":1,"date":"","price":2100,"status":"In attesa","total":2100}
+      {"id":"new-2","item":"Scarpe da mercenario dell'apprendista","quality":"Sublime","enchant":".0","quantity":1,"date":"","price":2100,"status":"In attesa","total":2100},
+      {"id":"hunter-t4-jacket-20260916","item":"Giacca da cacciatore del Sapiente T4","quality":"Buona","enchant":".0","quantity":1,"date":"2026-09-16","price":3900,"status":"In attesa","total":3900},
+      {"id":"hunter-t4-head-20260916","item":"Copricapo da cacciatore del Sapiente T4","quality":"Normale","enchant":".0","quantity":1,"date":"2026-09-16","price":2400,"status":"In attesa","total":2400},
+      {"id":"hunter-t4-shoes-20260916","item":"Scarpe da cacciatore del Sapiente T4","quality":"Normale","enchant":".0","quantity":1,"date":"2026-09-16","price":2700,"status":"In attesa","total":2700},
+      {"id":"skinning-knife-t3-20260916","item":"Coltello da scuoiatore dell'apprendista T3","quality":"Normale","enchant":".0","quantity":5,"date":"2026-09-16","price":250,"status":"In attesa","total":1250}
     ]
   }
 }

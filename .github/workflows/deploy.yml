@@ -3,6 +3,8 @@ name: Deploy Merchant Empire to GitHub Pages
 on:
   push:
     branches: ['main']
+    paths-ignore:
+      - 'public/data/**'
   workflow_dispatch:
 
 permissions:

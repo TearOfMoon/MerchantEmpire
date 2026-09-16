@@ -35,7 +35,8 @@
     {"item":"Stoffa fine","tier":"T4","category":"Stoffa","qty":4,"source":"Acquisto","unitPrice":0},
     {"item":"Lingotto d'acciaio","tier":"T4","category":"Lingotti","qty":1,"source":"Raffinazione","unitPrice":0}
   ]},
-  "ledger":{"currentBalance":229022,"records":[
+  "ledger":{"currentBalance":230222,"records":[
+    {"date":"2026-09-16T14:30:50Z","description":"Vendita 5 Coltelli da scuoiatore dell'apprendista T3 Normale","type":"Vendita","income":1200,"expense":0,"balance":230222,"notes":"5 × 250 Silver; lordo 1.250, tassa 50 (4%), netto 1.200. Vendita precedentemente comunicata e ripristinata dopo rollback."},
     {"date":"2026-09-16T14:29:10Z","description":"Riparazioni sessione Scuoiatore","type":"Spesa","income":0,"expense":1566,"balance":229022,"notes":"Sessione Scuoiatore del Sapiente. Capitale finale autoritativo comunicato: 229.022 Silver."},
     {"date":"2026-09-16T14:29:09Z","description":"Craft Stivali da Scuoiatore del Sapiente T4.1","type":"Spesa","income":0,"expense":279,"balance":230588,"notes":"Sessione Scuoiatore del Sapiente T4.1."},
     {"date":"2026-09-16T14:29:08Z","description":"Craft Cappello da Scuoiatore del Sapiente T4.1","type":"Spesa","income":0,"expense":279,"balance":230867,"notes":"Sessione Scuoiatore del Sapiente T4.1."},
@@ -62,7 +63,7 @@
     {"id":"hunter-t4-jacket-20260916","item":"Giacca da cacciatore del Sapiente T4","quality":"Buona","enchant":".0","quantity":1,"date":"2026-09-16","price":3900,"status":"In attesa","total":3900},
     {"id":"hunter-t4-head-20260916","item":"Copricapo da cacciatore del Sapiente T4","quality":"Normale","enchant":".0","quantity":1,"date":"2026-09-16","price":2400,"status":"Venduto","total":2400},
     {"id":"hunter-t4-shoes-20260916","item":"Scarpe da cacciatore del Sapiente T4","quality":"Normale","enchant":".0","quantity":1,"date":"2026-09-16","price":2700,"status":"Venduto","total":2700},
-    {"id":"skinning-knife-t3-20260916","item":"Coltello da scuoiatore dell'apprendista T3","quality":"Normale","enchant":".0","quantity":5,"date":"2026-09-16","price":250,"status":"In attesa","total":1250},
+    {"id":"skinning-knife-t3-20260916","item":"Coltello da scuoiatore dell'apprendista T3","quality":"Normale","enchant":".0","quantity":5,"date":"2026-09-16","price":250,"status":"Venduto","total":1250},
     {"id":"skinner-t4-garb-20260916","item":"Indumenti/Veste da Scuoiatore del Sapiente T4","quality":"Buona","enchant":".0","quantity":1,"date":"2026-09-16","price":4100,"status":"In attesa","total":4100},
     {"id":"skinner-t4-head-20260916","item":"Cappello da Scuoiatore del Sapiente T4","quality":"Sublime","enchant":".0","quantity":1,"date":"2026-09-16","price":3700,"status":"In attesa","total":3700},
     {"id":"skinner-t4-shoes-20260916","item":"Stivali da Scuoiatore del Sapiente T4","quality":"Normale","enchant":".0","quantity":1,"date":"2026-09-16","price":2600,"status":"In attesa","total":2600}

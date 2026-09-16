@@ -34,8 +34,9 @@
     ]
   },
   "ledger": {
-    "currentBalance": 232221,
+    "currentBalance": 230435,
     "records": [
+      {"date":"2026-09-16T13:12:31Z","description":"Viaggio rapido","type":"Spesa","income":0,"expense":1786,"balance":230435,"notes":"Costo viaggio rapido."},
       {"date":"2026-09-15T22:49:24Z","description":"Sessione raffinazione e crafting scuoiatore","type":"Spesa","income":0,"expense":7349,"balance":232221,"notes":"Raffinazione e crafting equipaggiamento da scuoiatore."},
       {"date":"2026-09-15T22:12:19Z","description":"Acquisto Stoffa fine T4","type":"Spesa","income":0,"expense":1276,"balance":239570,"notes":"4 Stoffa fine T4 per equipaggiamento da scuoiatore."},
       {"date":"2026-09-15T22:12:18Z","description":"Acquisto Assi di betulla T2","type":"Spesa","income":0,"expense":6109,"balance":240846,"notes":"149 Assi di betulla T2 per produzione coltelli da scuoiatore."},
